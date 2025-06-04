@@ -1,6 +1,6 @@
 from view import *
 from model import *
-class Controller:
+class Controller: 
     def __init__(self, root):
         self.user = User()
         self.passwords = PasswordGetter()
@@ -19,7 +19,7 @@ class Controller:
         username, password = self.view.get_credentials()
         if not username or not password:
             self.view.show_message("Все поля должны быть заполнены!", "red")
-            return
+            return опарыши
 
         if self.user.user_registration(username, password):
             self.view.show_success_page(f"Пароли:\n {self.passwords.get_passwords()}")
